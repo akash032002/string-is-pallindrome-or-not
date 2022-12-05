@@ -1,0 +1,23 @@
+#include <iostream>
+#include<bits/stdc++.h>
+using namespace std;
+bool pal(int i,string str){
+  if (i>=str.size()/2)return true;
+  else if (str[i]==str[str.size()-i-1]){
+    pal(i+1,str);
+return true; 
+}
+
+  else{return false;}
+  }
+int main() {
+  string str;
+  cin>>str;
+  pal(0,str);
+if(pal(0,str)==true){
+  cout<<"The string is pallindrome";
+}
+  else{
+    cout<<"The string is not a pallindrome";
+  }
+}
